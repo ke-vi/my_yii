@@ -3,16 +3,16 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-//     'defaultRoute'=>'hello',
+//     'defaultRoute'=>'admin',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [ 
         'api' => [
-            'class' => 'app\modules\api\api',
+            'class' => 'app\mudules\api\api',
         ],
         'admin' => [
-            'class' => 'app\modules\admin\admin',
+            'class' => 'app\mudules\admin\admin',
         ],
     ],
     'components' => [

@@ -55,7 +55,7 @@ class Controller extends Component implements ViewContextInterface
      * Defaults to null, meaning the actual layout value should inherit that from [[module]]'s layout value.
      * If false, no layout will be applied.
      */
-    public $layout;
+    public $layout=false;
     /**
      * @var Action the action that is currently being executed. This property will be set
      * by [[run()]] when it is called by [[Application]] to run an action.

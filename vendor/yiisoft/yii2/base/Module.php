@@ -105,7 +105,7 @@ class Module extends ServiceLocator
      * If action ID is not given, it will take the default value as specified in
      * [[Controller::defaultAction]].
      */
-    public $defaultRoute = 'default';
+    public $defaultRoute = 'admin';
 
     /**
      * @var string the root directory of the module.
