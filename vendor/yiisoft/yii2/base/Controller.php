@@ -512,4 +512,21 @@ class Controller extends Component implements ViewContextInterface
 
         return $path;
     }
+    
+    public  function jsonResult($code,$msg){
+        $respone = array(
+            "code" => $code,
+            "result"  => $msg
+        );
+        echo json_encode($respone,JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        \Yii::$app->end();
+    }
+    public  function jsonError($code,$msg){
+        $respone = array(
+            "code" => $code,
+            "msg"  => $msg
+        );
+        echo json_encode($respone,JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        \Yii::$app->end();
+    }
 }

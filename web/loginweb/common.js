@@ -36,16 +36,13 @@ $(document).ready(function(){
 
 	});
 	//注册表单验证
-	$("#registerForm").validate({
+	$("#register").validate({
 		rules:{
 			username:{
 				required:true,//必填
 				minlength:3, //最少6个字符
 				maxlength:32,//最多20个字符
-				remote:{
-					url:"http://kouss.com/demo/Sharelink/remote.json",//用户名重复检查，别跨域调用
-					type:"post",
-				},
+				
 			},
 			password:{
 				required:true,

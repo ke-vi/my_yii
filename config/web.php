@@ -3,16 +3,19 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-//     'defaultRoute'=>'admin',
+    'defaultRoute'=>'/admin/admin',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [ 
         'api' => [
-            'class' => 'app\mudules\api\api',
+            'class' => 'app\modules\api\api',
         ],
         'admin' => [
-            'class' => 'app\mudules\admin\admin',
+            'class' => 'app\modules\admin\admin',
+        ],
+        'phpmyadmin' => [
+            'class' => 'app\modules\phpmyadmin\index',
         ],
     ],
     'components' => [
@@ -23,10 +26,10 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],
+        // 'user' => [
+        //     'identityClass' => 'app\models\User',
+        //     'enableAutoLogin' => true,
+        // ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
