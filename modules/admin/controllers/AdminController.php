@@ -61,11 +61,11 @@ class AdminController extends Controller
     public function actionLogin(){
         $request = \Yii::$app->request;
         $userName = $request->post('username');
+        $password = $request->post('password');
+        if(empty($userName)||empty($password)){
+            return $this->jsonError(100, "参数缺失");
+        }
         $password = md5($request->post('password'));
-        
-        
-        //判断是否为空
-        
         
         //到数据库中核对登录信息
         $user = $this->userService->getUser($userName, $password);
